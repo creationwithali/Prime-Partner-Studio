@@ -36,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-900 to-black">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-purple-900 via-indigo-900 to-black">
       <div className="backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8 w-full max-w-md text-center text-gray-100 transition-all duration-300 hover:scale-[1.02]">
         {/* Heading */}
         <h2 className="text-3xl font-bold mb-3 text-white">Welcome Back 👋</h2>
