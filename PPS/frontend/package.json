@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
+    "dotenv": "^17.2.3",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.552.0",
+    "mongodb": "^7.0.0",
     "mongoose": "^8.19.3",
     "next": "^15.0.0",
     "react": "^19.1.1",

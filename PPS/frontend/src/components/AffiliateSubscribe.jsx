@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import React, { useState } from "react";
+import { tgtoast } from "./TgToast";
 
 const AffiliateSubscribe = () => {
   const [email, setEmail] = useState("");
@@ -8,12 +9,12 @@ const AffiliateSubscribe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email.includes("@")) {
-      alert("Please enter a valid email address.");
+      tgtoast("Please enter a valid email address.", { type: "error" });
       return;
     }
     setLoading(true);
     await new Promise((r) => setTimeout(r, 1000)); // Mock API call
-    alert(`Subscribed successfully with ${email}`);
+    tgtoast(`Subscribed successfully with ${email}`, { type: "success" });
     setEmail("");
     setLoading(false);
   };

@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { tgtoast } from "./TgToast";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -21,19 +22,21 @@ const Login = () => {
       const data = await res.json();
 
       if (res.ok) {
-        alert("✅ Login successful!");
+        tgtoast("✅ Login successful!", { type: "success" });
         localStorage.setItem("isLoggedIn", true);
         router.push("/");
       } else {
-        alert("❌ " + data.message);
+        tgtoast("❌ " + (data?.message || "Login failed"), { type: "error" });
       }
     } catch (error) {
-      alert("❌ " + error.message);
+      tgtoast("❌ " + (error?.message || "An error occurred"), {
+        type: "error",
+      });
     }
   };
 
   return (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-900 to-black">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-900 to-black">
       <div className="backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8 w-full max-w-md text-center text-gray-100 transition-all duration-300 hover:scale-[1.02]">
         {/* Heading */}
         <h2 className="text-3xl font-bold mb-3 text-white">Welcome Back 👋</h2>
@@ -70,7 +73,11 @@ const Login = () => {
           <div className="text-right">
             <button
               type="button"
-              onClick={() => alert("🔑 Reset password flow not added yet")}
+              onClick={() =>
+                tgtoast("🔑 Reset password flow not added yet", {
+                  type: "info",
+                })
+              }
               className="text-sm text-indigo-300 hover:text-indigo-400"
             >
               Forgot Password?

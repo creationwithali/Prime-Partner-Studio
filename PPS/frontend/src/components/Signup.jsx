@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { tgtoast } from "./TgToast";
 
 const Signup = () => {
   const [fullName, setFullName] = useState("");
@@ -13,7 +14,7 @@ const Signup = () => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      alert("❌ Passwords do not match!");
+      tgtoast("❌ Passwords do not match!", { type: "error" });
       return;
     }
 
@@ -27,18 +28,20 @@ const Signup = () => {
       const data = await res.json();
 
       if (res.ok) {
-        alert("✅ Signup successful!");
+        tgtoast("✅ Signup successful!", { type: "success" });
         router.push("/login");
       } else {
-        alert("❌ " + data.message);
+        tgtoast("❌ " + (data?.message || "Signup failed"), { type: "error" });
       }
     } catch (error) {
-      alert("❌ " + error.message);
+      tgtoast("❌ " + (error?.message || "An error occurred"), {
+        type: "error",
+      });
     }
   };
 
   return (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-900 to-black">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-purple-900 via-indigo-900 to-black">
       {/* Card */}
       <div className="backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8 w-full max-w-md text-center text-gray-100 transition-all duration-300 hover:scale-[1.02]">
         {/* Logo / Heading */}

@@ -61,6 +61,15 @@ export async function POST(req) {
   } catch (error) {
     console.error('Signup error:', error)
 
+    // Handle MongoDB duplicate key error
+    if (error.code === 11000) {
+      const field = Object.keys(error.keyPattern)[0]
+      return NextResponse.json(
+        { message: `This ${field} is already registered` },
+        { status: 409 }
+      )
+    }
+
     // Handle validation errors from MongoDB schema
     if (error.name === 'ValidationError') {
       const messages = Object.values(error.errors)
