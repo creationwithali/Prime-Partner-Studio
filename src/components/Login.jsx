@@ -36,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-purple-900 via-indigo-900 to-black">
+    <div className="min-h-screen flex items-center justify-center bg-white/50 backdrop-blur-sm absolute inset-0">
       <div className="flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl px-4">
         {/* Card */}
         <div className="order-1 md:order-1 w-full md:w-1/2">
@@ -56,10 +56,10 @@ const Login = () => {
                 <label className="block mb-1 text-sm text-black">Email</label>
                 <input
                   type="email"
-                  placeholder="username@gmail.com"
+                  placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 border -2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
                 />
               </div>
 
@@ -70,10 +70,10 @@ const Login = () => {
                 </label>
                 <input
                   type="password"
-                  placeholder="********"
+                  placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 border -2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
                 />
               </div>
 
@@ -114,7 +114,7 @@ const Login = () => {
         </div>
 
         {/* Video on the right for login (hidden on small screens) */}
-        <div className="order-2 md:order-2 w-full md:w-1/2 flex justify-center">
+        <div className="order-2 md:order-2 w-auto h-96 md:w-1/2 flex justify-center">
           <video
             src="/home.mp4"
             autoPlay

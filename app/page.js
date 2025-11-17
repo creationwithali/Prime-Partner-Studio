@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../src/components/Navbar'
 import Footer from '../src/components/Footer'
-import Alert from '../src/components/Alert'
+// import Alert from '../src/components/Alert'
 import Navpic from '../src/components/Navpic'
 import Had from '../src/components/had'
 import Cards from '../src/components/Crards'
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <Alert />
+      {/* <Alert /> */}
       <Navpic />
       <Had />
       <Cards />

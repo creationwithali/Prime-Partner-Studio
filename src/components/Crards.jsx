@@ -36,7 +36,7 @@ const Cards = () => {
           </ul>
 
           <a
-            href="#"
+            href="/login"
             className="block w-full bg-[#4A70A9] text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-[#000000] transition-colors"
           >
             See All Features
@@ -71,7 +71,7 @@ const Cards = () => {
           </ul>
 
           <a
-            href="#"
+            href="/login"
             className="block w-full bg-[#4A70A9] text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-[#000000] transition-colors"
           >
             Become a Partner

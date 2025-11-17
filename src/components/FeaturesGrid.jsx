@@ -47,7 +47,7 @@ const FeaturesGrid = () => {
       <section className="py-16 px-6 md:px-12 lg:px-24 w-3/4 bg-gray-100">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-[#1E293B] mb-3">
-            Why Choose Marketcall?
+            Why Choose Prime Partner Studio?
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We provide everything you need to scale your performance marketing

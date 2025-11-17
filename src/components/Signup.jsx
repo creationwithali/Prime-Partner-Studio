@@ -41,10 +41,10 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-purple-900 via-indigo-900 to-black">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-white-200 via-white-900 to-white  absolute inset-0 bg-white/50 backdrop-blur-sm ">
       <div className="flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl px-4">
         {/* Video on the left for signup */}
-        <div className="w-full md:w-1/2 flex justify-center order-1 md:order-1">
+        <div className="w-auto h-96 md:w-1/2 flex justify-center order-1 md:order-1">
           <video
             src="/home.mp4"
             autoPlay
@@ -75,10 +75,10 @@ const Signup = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Name"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 border -2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
                 />
               </div>
 
@@ -87,10 +87,10 @@ const Signup = () => {
                 <label className="block mb-1 text-sm text-black">Email</label>
                 <input
                   type="email"
-                  placeholder="username@gmail.com"
+                  placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 border -2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
                 />
               </div>
 
@@ -101,10 +101,10 @@ const Signup = () => {
                 </label>
                 <input
                   type="password"
-                  placeholder="********"
+                  placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 border -2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
                 />
               </div>
 
@@ -115,10 +115,10 @@ const Signup = () => {
                 </label>
                 <input
                   type="password"
-                  placeholder="********"
+                  placeholder="Confirm Password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-400 border -2 border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4a70a8]"
                 />
               </div>
 

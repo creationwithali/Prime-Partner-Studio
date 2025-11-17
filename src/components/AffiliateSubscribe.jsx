@@ -49,7 +49,7 @@ const AffiliateSubscribe = () => {
       {/* 🧾 Heading */}
       <h2 className="text-2xl font-bold">Get Private Affiliate Case Studies</h2>
       <p className="text-gray-600 mt-2">
-        And learn all secret methods used by Marketcall affiliates
+        And learn all secret methods used by Prime Partner Studio affiliates
       </p>
 
       {/* 📧 Email Form */}

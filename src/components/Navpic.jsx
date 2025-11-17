@@ -10,7 +10,7 @@ const Navpic = () => {
         </h1>
 
         <p className="text-gray-200 text-sm sm:text-base leading-relaxed max-w-md">
-          Marketcall is the best affiliate network to get new clients. <br />
+          is the best affiliate network to get new clients. <br />
           We make millions of conversions every year.
         </p>
 

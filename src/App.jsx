@@ -14,7 +14,7 @@ import Login from "./components/Login";
 import AffiliateSubscribe from "./components/AffiliateSubscribe";
 import Footer from "./components/Footer";
 
-import Alert from "./components/Alert";
+// import Alert from "./components/Alert";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -23,7 +23,7 @@ const App = () => {
       element: (
         <div>
           <Navbar />
-          <Alert />
+          {/* <Alert />  */}
           <Navpic />
           <Had />
           <Cards />
