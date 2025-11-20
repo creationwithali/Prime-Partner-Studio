@@ -18,7 +18,7 @@ export default function IndustriesPage() {
             <p className="text-sm text-gray-600">Scale online sales with powerful conversion tools.</p>
           </div>
           <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="font-semibold mb-2">SaaS</h3>
+            <h3 className="font-semibold mb-2">Services</h3>
             <p className="text-sm text-gray-600">Optimize onboarding and retention for subscription products.</p>
           </div>
           <div className="bg-white rounded-lg shadow p-6">

@@ -43,15 +43,15 @@ const Signup = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-white-200 via-white-900 to-white  absolute inset-0 bg-white/50 backdrop-blur-sm ">
       <div className="flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl px-4">
-        {/* Video on the left for signup */}
-        <div className="w-auto h-96 md:w-1/2 flex justify-center order-1 md:order-1">
+        {/* Video on the left for signup (larger on desktop) */}
+        <div className="w-full md:w-1/2 h-64 md:h-[520px] flex items-center justify-center overflow-hidden rounded-2xl order-1 md:order-1">
           <video
             src="/home.mp4"
             autoPlay
             loop
             muted
             playsInline
-            className="w-80 h-56 object-cover rounded-2xl shadow-lg"
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
         </div>
 

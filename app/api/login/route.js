@@ -6,9 +6,14 @@ import { User } from '@/lib/models/User'
 
 export async function POST(req) {
   try {
+    // Connect to database
     await connectDB()
 
-    const { email, password } = await req.json()
+    // Parse request body
+    const body = await req.json()
+    const { email, password } = body
+
+    console.log('Login attempt for email:', email)
 
     // Validate input
     if (!email || !password) {
@@ -18,13 +23,25 @@ export async function POST(req) {
       )
     }
 
-    // Query user from database
+    // Query user from database with password field
     const user = await User.findOne({ email }).select('+password')
 
     if (!user) {
+      console.log('User not found:', email)
       return NextResponse.json(
-        { message: 'User not found' },
-        { status: 404 }
+        { message: 'Invalid email or password' },
+        { status: 401 }
+      )
+    }
+
+    console.log('User found:', user.email)
+
+    // Check if password exists
+    if (!user.password) {
+      console.error('User has no password set:', email)
+      return NextResponse.json(
+        { message: 'Account error. Please contact support.' },
+        { status: 500 }
       )
     }
 
@@ -32,11 +49,14 @@ export async function POST(req) {
     const isPasswordMatch = await bcrypt.compare(password, user.password)
 
     if (!isPasswordMatch) {
+      console.log('Password mismatch for:', email)
       return NextResponse.json(
-        { message: 'Invalid password' },
+        { message: 'Invalid email or password' },
         { status: 401 }
       )
     }
+
+    console.log('Login successful for:', email)
 
     // Generate JWT token
     const token = jwt.sign(
@@ -60,8 +80,15 @@ export async function POST(req) {
     )
   } catch (error) {
     console.error('Login error:', error)
+    console.error('Error stack:', error.stack)
+    
+    // Return detailed error in development
+    const isDev = process.env.NODE_ENV !== 'production'
     return NextResponse.json(
-      { message: 'Internal server error' },
+      { 
+        message: isDev ? `Server error: ${error.message}` : 'Internal server error',
+        ...(isDev && { error: error.message, stack: error.stack })
+      },
       { status: 500 }
     )
   }
