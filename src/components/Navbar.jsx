@@ -1,9 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState } from "react"; // <-- add this line
 import { Menu, X } from "lucide-react"; // ✅ For icons (install via: npm i lucide-react)
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [logout, setlogout] = useState(false);
+  function handleLogout() {
+    setlogout(true);
+  }
 
   return (
     <nav className="bg-black text-[#4A70A9] h-16 w-full flex items-center justify-between px-6 md:px-10 relative">
@@ -26,12 +30,8 @@ const Navbar = () => {
         <a href="/product" className="hover:text-[#ffffff] transition-colors">
           Product
         </a>
-        <a href="/help" className="hover:text-[#ffffff] transition-colors">
-          Help
-        </a>
-        <a href="/center" className="hover:text-[#FEB21A] transition-colors">
-          Center
-        </a>
+       
+      
         <a
           href="/industries"
           className="hover:text-[#ffffff] transition-colors"
@@ -39,7 +39,7 @@ const Navbar = () => {
           Industries
         </a>
         <a href="/company" className="hover:text-[#ffffff] transition-colors">
-          Company
+          About
         </a>
         <a href="/blog" className="hover:text-[#ffffff] transition-colors">
           Blog
@@ -48,8 +48,11 @@ const Navbar = () => {
 
       {/* Desktop Button */}
       <div className="hidden md:block">
-        <button className="bg-[#4A70A9] text-black font-bold px-4 py-2 rounded hover:bg-[#ffffff] transition-colors">
-          Get Started
+        <button
+          onClick={handleLogout}
+          className="bg-[#4A70A9] text-black font-bold px-4 py-2 rounded hover:bg-[#ffffff] transition-colors"
+        >
+          <a href="/login">{logout ? "Log out" : "Log in"}</a>
         </button>
       </div>
 
@@ -90,7 +93,7 @@ const Navbar = () => {
             href="/signup"
             className="bg-[#5eff00] text-black font-bold px-4 py-2 rounded hover:bg-[#FEB21A] transition-colors"
           >
-            Get Started
+            Login
           </a>
         </div>
       )}

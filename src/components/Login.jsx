@@ -113,15 +113,15 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Video on the right for login (hidden on small screens) */}
-        <div className="order-2 md:order-2 w-auto h-96 md:w-1/2 flex justify-center">
+        {/* Video on the right for login (larger on desktop) */}
+        <div className="order-2 md:order-2 w-full md:w-1/2 h-64 md:h-[520px] flex items-center justify-center overflow-hidden rounded-2xl">
           <video
             src="/home.mp4"
             autoPlay
             loop
             muted
             playsInline
-            className="w-80 h-56 object-cover rounded-2xl shadow-lg"
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
         </div>
       </div>

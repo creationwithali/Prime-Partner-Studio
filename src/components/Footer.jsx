@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaPhoneAlt,
   FaEnvelope,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -167,18 +168,19 @@ const Footer = () => {
           <h3 className="text-white text-lg font-semibold mb-2">Follow</h3>
           <div className="flex gap-4 text-2xl">
             <a
-              href="#"
+              href="https://wa.me/14172417574
+"
               aria-label="Facebook"
               className="hover:text-indigo-400 transition-colors"
             >
-              <FaFacebook />
+              <FaWhatsapp />
             </a>
             <a
-              href="#"
-              aria-label="Instagram"
+              href="mailto:Primepartnerstudio@gmail.com"
+              aria-label="gmail"
               className="hover:text-indigo-400 transition-colors"
             >
-              <FaInstagram />
+              <FaEnvelope />
             </a>
           </div>
         </div>
