@@ -28,7 +28,7 @@ const Navbar = () => {
           Home
         </a>
         <a href="/product" className="hover:text-[#ffffff] transition-colors">
-          Product
+          Capmaigns
         </a>
        
       
@@ -71,7 +71,7 @@ const Navbar = () => {
             Home
           </a>
           <a href="/product" className="hover:text-[#FEB21A] font-bold">
-            Product
+            Capmaigns
           </a>
           <a href="/help" className="hover:text-[#FEB21A] font-bold">
             Help
