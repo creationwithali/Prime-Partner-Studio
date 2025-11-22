@@ -10,4 +10,5 @@ const Had = () => {
   );
 };
 
+
 export default Had;
