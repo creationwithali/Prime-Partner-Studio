@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Navpic from "./components/Navpic";
 import Cards from "./components/Crards";
-import Had from "./components/Had";
+import Had from "./components/Hads";
 import FeaturesGrid from "./components/FeaturesGrid";
 import MarAbout from "./components/MarAbout";
 import StatsSection from "./components/StatsSection";

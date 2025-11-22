@@ -1,6 +1,6 @@
 import React from "react";
 
-const Had = () => {
+const Hads = () => {
   return (
     <div className=" bg-gray-100 h-32 flex justify-center">
       <h1 className="font-bold text-3xl md:text-5xl text-center my-10">
@@ -13,4 +13,4 @@ const Had = () => {
 
 
 
-export default Had;
+export default Hads;

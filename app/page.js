@@ -3,7 +3,7 @@ import Navbar from '@/src/components/Navbar'
 import Footer from '@/src/components/Footer'
 // import Alert from '@/src/components/Alert'
 import Navpic from '@/src/components/Navpic'
-import Had from '@/src/components/Had'
+import Hads from '@/src/components/Hads'
 import Cards from '@/src/components/Crards'
 import FeaturesGrid from '@/src/components/FeaturesGrid'
 import MarAbout from '@/src/components/MarAbout'
@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar />
       {/* <Alert /> */}
       <Navpic />
-      <Had />
+      <Hads />
       <Cards />
       <FeaturesGrid />
       <MarAbout />
